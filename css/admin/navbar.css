@@ -1,0 +1,106 @@
+:root {
+    --cor-primary: #52B1FF;
+    --cor-second: #faeded;
+    --cinza-menu: #3b4046;
+    --cinza-hover: #4a5057;
+    --largura-menu: 250px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--cor-second);
+}
+
+.btn-menu {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    width: 44px;
+    height: 44px;
+    background: var(--cinza-menu);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 30;
+}
+
+.btn-menu:hover {
+    background: var(--cinza-hover);
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--largura-menu);
+    background: var(--cinza-menu);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+    z-index: 20;
+}
+
+body.menu-fechado .menu-lateral {
+    transform: translateX(-100%);
+}
+
+.menu-lateral nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 72px;
+}
+
+.menu-lateral nav a {
+    color: #e9ecef;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 15px 24px;
+    border-left: 4px solid transparent;
+    transition: background 0.2s;
+}
+
+.menu-lateral nav a:hover,
+.menu-lateral nav a.ativo {
+    background: var(--cinza-hover);
+    border-left-color: var(--cor-primary);
+}
+
+.btn-sair {
+    margin: auto 20px 24px;
+    padding: 12px;
+    background: #c0392b;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.btn-sair:hover {
+    background: #a93226;
+}
+
+.conteudo-admin {
+    margin-left: var(--largura-menu);
+    padding: 72px 32px 32px;
+    transition: margin-left 0.3s;
+}
+
+body.menu-fechado .conteudo-admin {
+    margin-left: 0;
+}

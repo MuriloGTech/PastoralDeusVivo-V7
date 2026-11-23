@@ -1,0 +1,151 @@
+.conteudo-admin h1 { font-size: 24px; color: #2c3e50; margin-bottom: 6px; }
+.intro { color: #5d6d7e; margin-bottom: 22px; }
+
+.barra-filtro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    gap: 14px 24px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 16px 18px;
+    margin-bottom: 20px;
+}
+
+.filtros { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+.filtros label, .campo { display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 700; color: #34495e; }
+
+.filtros input, .filtros select, .campo input, .campo select {
+    padding: 11px;
+    border: 1px solid #ccd1d9;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #fff;
+}
+.filtros input, .filtros select { min-width: 180px; }
+.campo input, .campo select { width: 100%; }
+.filtros input:focus, .filtros select:focus, .campo input:focus, .campo select:focus {
+    outline: none;
+    border-color: #2980b9;
+    box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.15);
+}
+
+.periodo-doacoes { color: #34495e; font-weight: 700; font-size: 14px; }
+
+.btn-acao, .btn-editar {
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 700;
+    padding: 11px 16px;
+    cursor: pointer;
+}
+.btn-acao { background: #2980b9; height: 42px; }
+.btn-acao:hover { background: #21618c; }
+.btn-editar { background: #5d6d7e; }
+.btn-editar:hover { background: #4a5866; }
+
+.vazio {
+    background: #fff;
+    padding: 28px;
+    border-radius: 10px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grupo-doacao {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 16px 18px;
+    margin-bottom: 16px;
+}
+.grupo-doacao h2 { color: #2c3e50; font-size: 18px; }
+.totais { color: #2980b9; font-size: 14px; margin: 6px 0 12px; }
+
+.tabela { width: 100%; border-collapse: collapse; font-size: 14px; }
+.tabela th { text-align: left; font-size: 12px; color: #34495e; padding: 8px; background: #f3f6f9; }
+.tabela td { padding: 8px; border-top: 1px solid #e6eaee; color: #333; }
+
+.grade-cadastro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    margin-top: 24px;
+}
+
+.caixa {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 22px;
+}
+.caixa h2 { font-size: 18px; color: #2c3e50; margin-bottom: 16px; }
+
+.aviso {
+    font-size: 14px;
+    color: #7d5a0b;
+    background: #fef5e7;
+    border-left: 4px solid #f39c12;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+}
+.aviso-ok {
+    color: #21618c;
+    background: #eaf4fb;
+    border-left-color: #2980b9;
+}
+
+.form-grade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.campo-cheio, .form-grade .btn-acao { grid-column: 1 / -1; }
+
+.subtitulo {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #34495e;
+    margin: 26px 0 8px;
+}
+
+.lista-doadores {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+    border-top: 1px solid #e6eaee;
+}
+.lista-doadores li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 4px;
+    border-bottom: 1px solid #eef1f4;
+}
+.doador-info strong { display: block; font-size: 15px; font-weight: 600; color: #2c3e50; }
+.doador-info small { font-size: 13px; color: #7f8c8d; }
+
+@media (max-width: 900px) {
+    .grade-cadastro { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+    .form-grade { grid-template-columns: 1fr; }
+    .filtros input, .filtros select { min-width: 0; width: 100%; }
+    .filtros, .filtros label { width: 100%; }
+    .caixa { padding: 18px; }
+    .grupo-doacao { padding: 14px; }
+    .tabela { table-layout: fixed; }
+    .tabela th, .tabela td { padding: 7px 4px; font-size: 12px; overflow-wrap: anywhere; }
+    .tabela th { font-size: 9px; overflow-wrap: normal; }
+    .tabela th:nth-child(1), .tabela td:nth-child(1) { width: 27%; }
+    .tabela th:nth-child(3), .tabela td:nth-child(3) { width: 23%; }
+}

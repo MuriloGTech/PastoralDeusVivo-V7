@@ -1,0 +1,104 @@
+.topo-pagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 700px;
+    margin-bottom: 24px;
+}
+
+.conteudo-admin .topo-pagina h1 {
+    margin-bottom: 0;
+}
+
+.btn-lista {
+    background: #2980b9;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 11px 20px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.btn-lista:hover {
+    background: #21618c;
+}
+
+.conteudo-admin h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 24px;
+}
+
+.form-cadastro {
+    background: #fff;
+    max-width: 700px;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 6px;
+}
+
+.campo input,
+.campo select {
+    padding: 11px;
+    border: 1px solid #ccd1d9;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #fff;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: #2980b9;
+    box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.15);
+}
+
+.form-cadastro button {
+    grid-column: 1 / -1;
+    padding: 12px;
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.form-cadastro button:hover {
+    background: #21618c;
+}
+
+.foto-atual {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-top: 8px;
+    border: 1px solid #ccd1d9;
+}
+
+@media (max-width: 700px) {
+    .form-cadastro {
+        grid-template-columns: 1fr;
+    }
+}
